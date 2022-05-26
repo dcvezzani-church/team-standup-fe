@@ -1,0 +1,121 @@
+{
+  "id": 1,
+  "date": "2022-04-20",
+  "reports": [
+    {
+      "teamMember": {
+        "id": 1,
+        "name": "Sage Rau",
+        "email": "Enid_Kreiger37@hotmail.com",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/719.jpg"
+      },
+      "activities": {
+        "yesterday": [
+          {
+            "activityId": 1,
+            "description": "xAccusamus et inventore sit soluta dolorem aperiam adipisci placeat est"
+          },
+          {
+            "activityId": 2,
+            "description": "Culpa omnis voluptatum non aut beatae quasi nisi"
+          },
+          {
+            "activityId": 3,
+            "description": "Quia est ut quo sed"
+          }
+        ],
+        "today": [
+          {
+            "activityId": 4,
+            "description": "Suscipit ea voluptatum"
+          },
+          {
+            "activityId": 5,
+            "description": "Magnam nobis doloremque sed velit beatae doloribus"
+          },
+          {
+            "activityId": 6,
+            "description": "Eaque et perspiciatis quae delectus aperiam sunt dolorum"
+          }
+        ]
+      }
+    },
+    {
+      "teamMember": {
+        "id": 2,
+        "name": "Darien Stanton",
+        "email": "Jamaal81@hotmail.com",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/345.jpg"
+      },
+      "activities": {
+        "yesterday": [
+          {
+            "activityId": 1,
+            "description": "Accusamus et inventore sit soluta dolorem aperiam adipisci placeat est"
+          },
+          {
+            "activityId": 2,
+            "description": "Culpa omnis voluptatum non aut beatae quasi nisi"
+          },
+          {
+            "activityId": 3,
+            "description": "Quia est ut quo sed"
+          }
+        ],
+        "today": [
+          {
+            "activityId": 4,
+            "description": "Suscipit ea voluptatum"
+          },
+          {
+            "activityId": 5,
+            "description": "Magnam nobis doloremque sed velit beatae doloribus"
+          },
+          {
+            "activityId": 6,
+            "description": "Eaque et perspiciatis quae delectus aperiam sunt dolorum"
+          }
+        ]
+      }
+    },
+    {
+      "teamMember": {
+        "id": 3,
+        "name": "Dwight Waters",
+        "email": "Paxton.Kertzmann71@yahoo.com",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1170.jpg"
+      },
+      "activities": {
+        "yesterday": [
+          {
+            "activityId": 1,
+            "description": "Accusamus et inventore sit soluta dolorem aperiam adipisci placeat est"
+          },
+          {
+            "activityId": 2,
+            "description": "Culpa omnis voluptatum non aut beatae quasi nisi"
+          },
+          {
+            "activityId": 3,
+            "description": "Quia est ut quo sed"
+          }
+        ],
+        "today": [
+          {
+            "activityId": 4,
+            "description": "Suscipit ea voluptatum"
+          },
+          {
+            "activityId": 5,
+            "description": "Magnam nobis doloremque sed velit beatae doloribus"
+          },
+          {
+            "activityId": 6,
+            "description": "Eaque et perspiciatis quae delectus aperiam sunt dolorum"
+          }
+        ]
+      }
+    }
+  ]
+}
+
