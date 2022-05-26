@@ -22,6 +22,41 @@ When `mock=true` is included in the query parameters, content will be pulled fro
 
 The `/team-standup` endpoint is currently used to view the team standup notes for the most recent day and relies on a WS tier to provide a payload it can render.  While not a formal schema, please use [mock file](https://github.com/dcvezzani-church/team-standup-fe/blob/main/mock/standup.json) to provide an idea of the data contract the front end (FE) tier expects from the web service (WS) tier.
 
+Here is some pseudo-schema for the data contract the FE tier expects to consume from the WS tier.  Again, please see [mock file](https://github.com/dcvezzani-church/team-standup-fe/blob/main/mock/standup.json) for an example.
+
+FE:Activity
+```
+{
+  activityId: integer,
+  description: string,
+}
+```
+
+FE:Team Member
+```
+{
+  teamMember: {
+    id: integer,
+    name: string,
+    email: string (email),
+    avatar: string (image url),
+  },
+  activities: {
+    yesterday[]: array of FE:Activity taking place yesterday,
+    today[]: array of FE:Activity taking place yesterday,
+  }
+}
+```
+
+FE:Daily Standup
+```
+{
+  id: integer,
+  date: string,
+  reports[]: array of FE:Team Member
+}
+```
+
 ### Assignment
 
 For your task, please write a node express server to handle requests from the FE.  The FE will make calls to http://localhost:3001/api/team/standup, so obviously the WS will need to provide an endpoint to handle that request.
@@ -156,7 +191,7 @@ Ensure that both the FE and WS tier applications are running.  Once the WS endpo
 - http://localhost:3000/team-standup
 
 
-### Extra
+### Extras
 
 Up to this point, the FE will take whatever status entry it is given and render it.  If you have time, feel free to take on the following other tasks.  These extra tasks do not involve the provided FE tier at this time, so the resulting JSON payload will be the final product.
 
@@ -167,4 +202,5 @@ Admittedly, there are little to no requirements with these.  You are welcome to 
 3. Update the WS api to accept a list of status ids for retrieval
 4. Add sorting behavior to the endpoint
 5. Create a new endpoint that selects who will be giving the prayer for standup based on the stats available in who has given prayers and who will be in the office for the given day
+6. The date is currently being handled as a string; when preparing the transform for the FE contract, render this date in a more human readable format (assume the Mountain Time timezone is used since the FE is not currently providing that information in its calls to the WS tier).
 
