@@ -16,7 +16,7 @@ Navigate to http://localhost:3000/team-standup?mock=true
 
 You should see something like this.  If you don't please reach out to me if you need help resolving any issues.
 
-![](images/efae3390-6328-4474-9fc7-4610193a7dd9-01.png)
+![image](https://user-images.githubusercontent.com/49492290/170529565-20369d2d-e7cd-4e6d-8ec5-01b15d598311.png)
 
 When `mock=true` is included in the query parameters, content will be pulled from a [mock file](https://github.com/dcvezzani-church/team-standup-fe/blob/main/mock/standup.json).
 
