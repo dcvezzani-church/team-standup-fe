@@ -28,12 +28,18 @@ For your task, please write a node express server to handle requests from the FE
 
 - http://localhost:3001/api/team/standup
 
-The WS should have access to the following sources.  Each represents a service, but for the purposes of this exercise, those sources are simply a JSON file.
+This endpoint should make calls to one or more service data sources (see below) and transform the resulting payloads into the data contract required by the FE as described earlier.
+
+### Data sources
+
+The WS should have access to the following sources.  Each represents a service, but for the purposes of this exercise, those sources are simply a JSON file; pretend they are actual service calls to some third party system.
 
 - teamMembers: 'https://raw.githubusercontent.com/dcvezzani-church/team-standup-db/main/teamMembers.json',
 - statusReportHistory: 'https://raw.githubusercontent.com/dcvezzani-church/team-standup-db/main/statusReportHistory.json',
 - prayerHistory: 'https://raw.githubusercontent.com/dcvezzani-church/team-standup-db/main/prayerHistory.json',
 - vacationPlans: 'https://raw.githubusercontent.com/dcvezzani-church/team-standup-db/main/vacationPlans.json'
+
+Some description of purpose and content have been included below.
 
 #### teamMembers: an array of team members.  Each record in the array should have records that look like this.
 
@@ -131,10 +137,34 @@ Prayer
   },
 ```
 
+### Getting started
 
+Please feel free to use your own knowledge and creativity along with established patterns to create a Node Express server to host the required WS tier endpoint(s).  To get things started, consider using [express-generator](https://expressjs.com/en/starter/generator.html).
+
+E.g.,
+```
 express --no-view team-standup-ws
+```
+
+Good luck!
 
 
+### Testing
+
+Ensure that both the FE and WS tier applications are running.  Once the WS endpoint has been created, the appropriate data sources fetched and the data transformed to the contract required by the FE, the following endpoint should render with content similar to the mocked content displayed earlier.  Just remove the `mock=true` the query parameter from the earlier url.
+
+- http://localhost:3000/team-standup
 
 
+### Extra
+
+Up to this point, the FE will take whatever status entry it is given and render it.  If you have time, feel free to take on the following other tasks.  These extra tasks do not involve the provided FE tier at this time, so the resulting JSON payload will be the final product.
+
+Admittedly, there are little to no requirements with these.  You are welcome to use that fact to show your creativity.  You are also welcome to ask questions.
+
+1. Add a testing framework to the WS tier along with at least one test
+2. Update the WS api to accept a status id for retrieval
+3. Update the WS api to accept a list of status ids for retrieval
+4. Add sorting behavior to the endpoint
+5. Create a new endpoint that selects who will be giving the prayer for standup based on the stats available in who has given prayers and who will be in the office for the given day
 
